@@ -11,6 +11,6 @@
         <tags>DateTime</tags>
     </metadata>
     <files>
-        <file src="bin\DateTimeProvider.dll" target="lib\DateTimeProvider.dll" />
+        <file src="bin\Release\DateTimeProvider.dll" target="lib\DateTimeProvider.dll" />
     </files>
 </package>

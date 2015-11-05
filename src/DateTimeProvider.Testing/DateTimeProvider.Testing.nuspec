@@ -14,6 +14,6 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\DateTimeProvider.Testing.dll" target="lib\DateTimeProvider.Testing.dll" />
+        <file src="bin\Release\DateTimeProvider.Testing.dll" target="lib\DateTimeProvider.Testing.dll" />
     </files>
 </package>
