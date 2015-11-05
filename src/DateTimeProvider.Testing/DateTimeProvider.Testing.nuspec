@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>DateTimeProvider</id>
+        <id>DateTimeProvider.Testing</id>
         <version>$version$</version>
-        <title>DateTimeProvider</title>
+        <title>DateTimeProvider.Testing</title>
         <authors>dennisroche</authors>
         <projectUrl>https://github.com/dennisroche/DateTimeProvider/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Provides an interface IDataTimeProvider and static container.</description>
-        <tags>DateTime</tags>
+        <tags>DateTime Testing</tags>
         <dependencies>
-            <dependency id="Microsoft.Owin.Hosting" version="3.0.0" />
+            <dependency id="DateTimeProvider" />
         </dependencies>
     </metadata>
     <files>
-        <file src="src\DateTimeProvider\bin\DateTimeProvider.dll" target="lib\DateTimeProvider.dll" />
+        <file src="bin\DateTimeProvider.Testing.dll" target="lib\DateTimeProvider.Testing.dll" />
     </files>
 </package>
