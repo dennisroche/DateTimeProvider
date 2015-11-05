@@ -7,8 +7,8 @@
     <ProjectGuid>{273B1F20-37BC-49AF-AFCE-F1EC9BF1BFAF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DateTimeProvider.Test</RootNamespace>
-    <AssemblyName>DateTimeProvider.Test</AssemblyName>
+    <RootNamespace>DateTimeProvider.Testing</RootNamespace>
+    <AssemblyName>DateTimeProvider.Testing</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

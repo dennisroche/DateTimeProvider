@@ -1,6 +1,6 @@
 using System;
 
-namespace DateTimeProvider.Test
+namespace DateTimeProvider.Testing
 {
     public class StaticDateTimeProvider : IDateTimeProvider
     {
