@@ -24,6 +24,20 @@ Install the [Nuget](https://www.nuget.org/packages/DateTimeProvider) package.
 
     Install-Package DateTimeProvider
 
+Set the provider
+
+```
+DateTimeProvider.Provider = new UtcDateTimeProvider();
+```
+
+Or
+
+```
+DateTimeProvider.Provider = new LocalDateTimeProvider();
+```
+
+**NB** The default is `UtcDateTimeProvider`.
+
 Then use or replace in place of `DateTime` in your code.
 
 ```c#
@@ -31,6 +45,55 @@ var now = DateTimeProvider.Now;
 var local = DateTimeProvider.LocalNow;
 var utc = DateTimeProvider.UtcNow;
 ```
+
+Pinning DateTime
+=============
+
+Also provided is a static `IDateTimeProvider` and `IDisposable` Override so that time can be manipulated in a fixed scope.
+
+Why is this useful?
+
+- In a web request, you want to freeze time so that all your modified dates are aligned (i.e. not +/- by a few seconds)
+- In unit tests when you need to verify business logic.
+
+### Examples
+
+#### Pinning Time in Logic
+
+```c#
+using (var o = new OverrideDateTimeProvider(DateTimeProvider.Now))
+{
+    // logic
+}
+```
+
+#### Pinning Time in Unit Tests
+
+In your tests, you need may need to manipulate time to verify your logic. This is easy using the `OverrideDateTimeProvider`.
+
+```c#
+Console.WriteLine($"{DateTimeProvider.Now}");
+
+var testingWithDate = new DateTimeOffset(new DateTime(2014, 10, 01), TimeSpan.FromHours(8));
+using (var o = new OverrideDateTimeProvider(testingWithDate))
+{
+    Console.WriteLine($"{DateTimeProvider.Now} (Testing)");
+    o.MoveTimeForward(TimeSpan.FromHours(5));
+    Console.WriteLine($"{DateTimeProvider.Now} (+ 5 hours)");
+}
+
+Console.WriteLine($"{DateTimeProvider.Now} (Restored)");
+```
+
+Output
+
+```
+6/11/2015 5:08:12 AM +00:00
+1/10/2014 12:00:00 AM +08:00 (Testing)
+1/10/2014 5:00:00 AM +08:00 (+ 5 hours)
+6/11/2015 5:08:12 AM +00:00 (Restored)
+```
+
 
 License
 =============
