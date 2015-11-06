@@ -12,6 +12,20 @@ Install the [Nuget](https://www.nuget.org/packages/DateTimeProvider) package.
 
     Install-Package DateTimeProvider
 
+Set the provider
+
+```
+DateTimeProvider.Provider = new UtcDateTimeProvider();
+```
+
+Or
+
+```
+DateTimeProvider.Provider = new LocalDateTimeProvider();
+```
+
+**NB** The default is `UtcDateTimeProvider`.
+
 Then use or replace in place of `DateTime` in your code.
 
 ```c#
@@ -39,4 +53,11 @@ using (var time = new OverrideDateTimeProvider())
     time.MoveTimeForward(TimeSpan.FromHours(5));
     Console.WriteLine($"{DateTimeProvider.Now}");
 }
+```
+Output
+
+```
+6/11/2015 1:51:50 AM +00:00
+6/11/2015 6:51:50 AM +00:00
+6/11/2015 1:51:50 AM +00:00
 ```
