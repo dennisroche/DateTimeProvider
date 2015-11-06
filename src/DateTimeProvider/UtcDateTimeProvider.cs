@@ -2,9 +2,6 @@
 {
     public class UtcDateTimeProvider : IDateTimeProvider
     {
-        public System.DateTimeOffset Now
-        {
-            get { return System.DateTimeOffset.UtcNow; }
-        }
+        public System.DateTimeOffset Now => System.DateTimeOffset.UtcNow;
     }
 }
