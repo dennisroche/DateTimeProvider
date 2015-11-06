@@ -5,6 +5,8 @@ Provides an interface IDataTimeProvider and static container. Implemented as a P
 
 Inspired by blog post https://robdmoore.id.au/blog/2015/01/26/review-of-jimmy-bogard-holistic-testing/
 
+The library provides `DateTimeOffset`, not `DateTime`. Why? Read this [excellent answer on StackOverflow](http://stackoverflow.com/a/14268167/73025)
+
 How to use
 =============
 
