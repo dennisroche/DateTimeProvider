@@ -49,17 +49,24 @@ Install the [Nuget](https://www.nuget.org/packages/DateTimeProvider.Testing) pac
 In your tests, you need may need to manipulate time to verify your logic. This is easy using the `OverrideDateTimeProvider`.
 
 ```c#
-using (var time = new OverrideDateTimeProvider())
+Console.WriteLine($"{DateTimeProvider.Now}");
+
+var testingWithDate = new DateTimeOffset(new DateTime(2014, 10, 01), TimeSpan.FromHours(8));
+using (var o = new OverrideDateTimeProvider(testingWithDate))
 {
-    Console.WriteLine($"{DateTimeProvider.Now}");
-    time.MoveTimeForward(TimeSpan.FromHours(5));
-    Console.WriteLine($"{DateTimeProvider.Now}");
+    Console.WriteLine($"{DateTimeProvider.Now} (Testing)");
+    o.MoveTimeForward(TimeSpan.FromHours(5));
+    Console.WriteLine($"{DateTimeProvider.Now} (+ 5 hours)");
 }
+
+Console.WriteLine($"{DateTimeProvider.Now} (Restored)");
 ```
+
 Output
 
 ```
-6/11/2015 1:51:50 AM +00:00
-6/11/2015 6:51:50 AM +00:00
-6/11/2015 1:51:50 AM +00:00
+6/11/2015 5:08:12 AM +00:00
+1/10/2014 12:00:00 AM +08:00 (Testing)
+1/10/2014 5:00:00 AM +08:00 (+ 5 hours)
+6/11/2015 5:08:12 AM +00:00 (Restored)
 ```
