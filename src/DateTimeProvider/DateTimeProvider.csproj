@@ -41,6 +41,8 @@
     <Compile Include="DateTimeProvider.cs" />
     <Compile Include="DateTimeProviders\IDateTimeProvider.cs" />
     <Compile Include="DateTimeProviders\LocalDateTimeProvider.cs" />
+    <Compile Include="DateTimeProviders\StaticDateTimeProvider.cs" />
+    <Compile Include="DateTimeProviders\OverrideDateTimeProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DateTimeProviders\UtcDateTimeProvider.cs" />
   </ItemGroup>
