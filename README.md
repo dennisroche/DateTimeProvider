@@ -80,3 +80,8 @@ Console.WriteLine($"{DateTimeProvider.Now} (Restored)");
 1/10/2014 5:00:00 AM +08:00 (+ 5 hours)
 6/11/2015 5:08:12 AM +00:00 (Restored)
 ```
+
+License
+=============
+
+MIT
