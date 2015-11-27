@@ -2,9 +2,6 @@
 {
     public class LocalDateTimeProvider : IDateTimeProvider
     {
-        public System.DateTimeOffset Now
-        {
-            get { return System.DateTimeOffset.Now; }
-        }
+        public System.DateTimeOffset Now => System.DateTimeOffset.Now;
     }
 }
