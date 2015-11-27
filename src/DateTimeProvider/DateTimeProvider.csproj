@@ -39,10 +39,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DateTimeProvider.cs" />
-    <Compile Include="IDateTimeProvider.cs" />
-    <Compile Include="LocalDateTimeProvider.cs" />
+    <Compile Include="DateTimeProviders\IDateTimeProvider.cs" />
+    <Compile Include="DateTimeProviders\LocalDateTimeProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UtcDateTimeProvider.cs" />
+    <Compile Include="DateTimeProviders\UtcDateTimeProvider.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

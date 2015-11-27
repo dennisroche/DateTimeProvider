@@ -1,6 +1,8 @@
 using System;
+using DateTimeProviders;
 
-namespace DateTimeProvider.Testing
+// ReSharper disable once CheckNamespace
+namespace DateTimeProviderTesting
 {
     public class OverrideDateTimeProvider : IDisposable
     {
