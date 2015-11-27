@@ -1,5 +1,4 @@
-﻿// ReSharper disable once CheckNamespace
-namespace DateTimeProviders
+﻿namespace DateTimeProviders
 {
     public class LocalDateTimeProvider : IDateTimeProvider
     {

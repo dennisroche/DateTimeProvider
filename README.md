@@ -44,17 +44,28 @@ var local = DateTimeProvider.LocalNow;
 var utc = DateTimeProvider.UtcNow;
 ```
 
-DateTimeProvider.Testing [![Build Master](https://ci.appveyor.com/api/projects/status/9rmer97iudefls62/branch/master?svg=true)](https://ci.appveyor.com/project/dennisroche/datetimeprovider) [![Build Release](https://ci.appveyor.com/api/projects/status/9rmer97iudefls62/branch/release?svg=true)](https://ci.appveyor.com/project/dennisroche/datetimeprovider) [![NuGet Version](http://img.shields.io/nuget/v/DateTimeProvider.Testing.svg?style=flat)](https://www.nuget.org/packages/DateTimeProvider.Testing/)
+Pinning DateTime
 =============
 
-Provides a static IDateTimeProvider and IDisposable Override so that time can be manipulated in Unit Tests
+Also provided is a static `IDateTimeProvider` and `IDisposable` Override so that time can be manipulated in a fixed scope.
 
-How to use
-=============
+Why is this useful?
 
-Install the [Nuget](https://www.nuget.org/packages/DateTimeProvider.Testing) package into your **Unit Test** project
+- In a web request, you want to freeze time so that all your modified dates are aligned (i.e. not +/- by a few seconds)
+- In unit tests when you need to verify business logic.
 
-    Install-Package DateTimeProvider.Testing
+### Examples
+
+#### Pinning Time in Logic
+
+```c#
+using (var o = new OverrideDateTimeProvider(DateTimeProvider.Now))
+{
+    // logic
+}
+```
+
+#### Pinning Time in Unit Tests
 
 In your tests, you need may need to manipulate time to verify your logic. This is easy using the `OverrideDateTimeProvider`.
 

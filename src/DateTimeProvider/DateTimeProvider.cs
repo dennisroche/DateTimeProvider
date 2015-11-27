@@ -1,7 +1,7 @@
 ﻿using DateTimeProviders;
-
-// ReSharper disable once CheckNamespace
+// ReSharper disable CheckNamespace
 // Using global:: namespace
+
 public static class DateTimeProvider
 {
     static DateTimeProvider()
