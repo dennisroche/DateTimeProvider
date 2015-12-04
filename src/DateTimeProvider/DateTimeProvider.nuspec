@@ -8,7 +8,7 @@
         <projectUrl>https://github.com/dennisroche/DateTimeProvider/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Provides an interface IDataTimeProvider and static container.</description>
-        <tags>DateTime</tags>
+        <tags>DateTime, DateTimeProvider, Date, Time</tags>
     </metadata>
     <files>
         <!-- targeting profile111 -->

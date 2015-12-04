@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>DateTimeProvider.Analyser</id>
+    <version>$version$</version>
+    <title>DateTimeProvider.Analyser</title>
+    <authors>dennisroche</authors>
+    <projectUrl>https://github.com/dennisroche/DateTimeProvider/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides Roslyn Analyser to provide code suggestions to change DateTime to DateTimeProvider.</description>
+    <tags>DateTimeAnalyser, DateTimeProvider, analyzers</tags>
+  </metadata>
+  <files>
+    <file src="*.dll" target="analyzers\dotnet\cs" exclude="**\Microsoft.CodeAnalysis.*;**\System.Collections.Immutable.*;**\System.Reflection.Metadata.*;**\System.Composition.*" />
+    <file src="Scripts\*.ps1" target="tools\" />
+  </files>
+</package>
