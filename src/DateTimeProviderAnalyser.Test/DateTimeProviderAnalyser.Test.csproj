@@ -94,13 +94,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DateTimeProviderCodeFixVerifier.cs" />
-    <Compile Include="DateTimeProviderDiagnosticVerifier.cs" />
+    <Compile Include="DateTimeOffsetTests.cs" />
+    <Compile Include="UtcDateTimeTests.cs" />
     <Compile Include="TestHelpers\DiagnosticResultLocation.cs" />
     <Compile Include="TestHelpers\CodeFixVerifier.cs" />
     <Compile Include="TestHelpers\DiagnosticVerifier.cs" />
     <Compile Include="TestHelpers\DiagnosticResult.cs" />
-    <Compile Include="UnitTests.cs" />
+    <Compile Include="LocalDateTimeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

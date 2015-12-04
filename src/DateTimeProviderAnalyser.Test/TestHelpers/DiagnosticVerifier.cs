@@ -30,7 +30,7 @@ namespace DateTimeProviderAnalyser.Test.TestHelpers
         /// </summary>
         protected virtual DiagnosticAnalyzer GetCSharpDiagnosticAnalyzer()
         {
-            return null;
+            throw new NotImplementedException();
         }
 
         /// <summary>

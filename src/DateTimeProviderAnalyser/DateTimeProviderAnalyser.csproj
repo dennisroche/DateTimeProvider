@@ -32,20 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DateTimeProviderCodeFixProvider.cs" />
-    <Compile Include="DateTimeProviderAnalyser.cs" />
+    <Compile Include="DateTimeOffsetNow\DateTimeUtcNowAnalyser.cs" />
+    <Compile Include="DateTimeOffsetNow\DateTimeUtcNowCodeFix.cs" />
+    <Compile Include="DateTimeUtcNow\DateTimeUtcNowAnalyser.cs" />
+    <Compile Include="DateTimeUtcNow\DateTimeUtcNowCodeFix.cs" />
+    <Compile Include="DateTimeNow\DateTimeNowCodeFix.cs" />
+    <Compile Include="DateTimeNow\DateTimeNowAnalyser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\DateTimeAnalyser.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DateTimeAnalyser.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\DateTimeAnalyser.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>DateTimeAnalyser.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="DateTimeProviderAnalyser.nuspec" />
@@ -102,6 +95,12 @@
       <HintPath>..\..\packages\System.Reflection.Metadata.1.0.21\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
       <Private>False</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DateTimeProvider\DateTimeProvider.csproj">
+      <Project>{f17c930a-ebea-4eb1-a178-325c31891eba}</Project>
+      <Name>DateTimeProvider</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\v4.5\Microsoft.Portable.CSharp.targets" />
 </Project>

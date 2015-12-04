@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Microsoft.CodeAnalysis;
@@ -22,7 +23,7 @@ namespace DateTimeProviderAnalyser.Test.TestHelpers
         /// <returns>The CodeFixProvider to be used for CSharp code</returns>
         protected virtual CodeFixProvider GetCSharpCodeFixProvider()
         {
-            return null;
+            throw new NotImplementedException();
         }
 
         /// <summary>
