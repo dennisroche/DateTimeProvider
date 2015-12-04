@@ -95,6 +95,16 @@ Output
 ```
 
 
+DateTimeProvider.Analyser [![NuGet Version](http://img.shields.io/nuget/v/DateTimeProvider.Analyser.svg?style=flat)](https://www.nuget.org/packages/DateTimeProvider.Analyser/)
+================
+
+Also available is a Roslyn Analyser that will suggest replacements for `DateTime` for `DateTimeProvider`.
+
+Install the [Nuget](https://www.nuget.org/packages/DateTimeProvider.Analyser) package.
+
+    Install-Package DateTimeProvider.Analyser
+
+
 License
 =============
 
