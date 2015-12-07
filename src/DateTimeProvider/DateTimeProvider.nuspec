@@ -11,6 +11,7 @@
         <tags>DateTime</tags>
     </metadata>
     <files>
-        <file src="bin\Release\DateTimeProvider.dll" target="lib\DateTimeProvider.dll" />
+        <!-- targeting profile111 -->
+        <file src="bin\Release\DateTimeProvider.dll" target="lib\portable-net45+netcore45+wpa81\DateTimeProvider.dll" />
     </files>
 </package>
