@@ -24,7 +24,7 @@ namespace DateTimeProviderAnalyser.Test
         }
     }";
 
-        private const string SourceWithCodeFix = @"
+        private const string SourceCodeWithFix = @"
     using System;
 
     namespace ConsoleApplication1
@@ -81,7 +81,7 @@ namespace DateTimeProviderAnalyser.Test
             };
 
             VerifyCSharpDiagnostic(SourceCodeWithIssue, expected);
-            VerifyCSharpFix(SourceCodeWithIssue, SourceWithCodeFix, null, true);
+            VerifyCSharpFix(SourceCodeWithIssue, SourceCodeWithFix, null, true);
         }
 
     }
