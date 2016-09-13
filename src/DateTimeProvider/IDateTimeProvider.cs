@@ -1,9 +1,7 @@
-using System;
-
-namespace DateTimeProvider
+namespace DateTimeProviders
 {
     public interface IDateTimeProvider
     {
-        DateTimeOffset Now { get; }
+        System.DateTimeOffset Now { get; }
     }
 }
