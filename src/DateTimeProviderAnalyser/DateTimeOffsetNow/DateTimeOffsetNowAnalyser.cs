@@ -5,22 +5,22 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 
-namespace DateTimeProviderAnalyser.DateTimeUtcNow
+namespace DateTimeProviderAnalyser.DateTimeOffsetNow
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    public class DateTimeUtcNowAnalyser : DiagnosticAnalyzer
+    public class DateTimeOffsetNowAnalyser : DiagnosticAnalyzer
     {
-        public const string DiagnosticId = nameof(DateTimeUtcNowAnalyser);
+        public const string DiagnosticId = nameof(DateTimeOffsetNowAnalyser);
 
-        public const string Title = "Use DateTimeProvider.UtcNow instead of DateTime";
-        public const string MessageFormat = "Use DateTimeProvider.UtcNow instead of DateTime.UtcNow";
+        public const string Title = "Use DateTimeProvider.Now instead of DateTimeOffset";
+        public const string MessageFormat = "Use DateTimeProvider.Now instead of DateTimeOffset.Now";
         public const string Description = "Use DateTimeProvider so that date and time is abstracted and easier to test";
         public const string HelpLinkUri = "https://github.com/dennisroche/DateTimeProvider";
 
         private const string Category = "Syntax";
         private const bool AlwaysEnabledByDefault = true;
 
-        public DateTimeUtcNowAnalyser()
+        public DateTimeOffsetNowAnalyser()
         {
             Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, AlwaysEnabledByDefault, Description, HelpLinkUri);
             SupportedDiagnostics = ImmutableArray.Create(Rule);
@@ -43,7 +43,7 @@ namespace DateTimeProviderAnalyser.DateTimeUtcNow
             if (identifier == null)
                 return;
 
-            if (identifier.Identifier.Text != nameof(DateTime))
+            if (identifier.Identifier.Text != nameof(DateTimeOffset))
                 return;
 
             var identifierSymbol = context.SemanticModel.GetSymbolInfo(identifier).Symbol as INamedTypeSymbol;
@@ -51,7 +51,7 @@ namespace DateTimeProviderAnalyser.DateTimeUtcNow
                 return;
 
             var accessor = member.Name.ToString();
-            if (accessor != nameof(DateTime.UtcNow))
+            if (accessor != nameof(DateTimeOffset.Now))
                 return;
 
             var rule = Rule;
