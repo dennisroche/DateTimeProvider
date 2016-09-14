@@ -12,7 +12,7 @@ namespace DateTimeProviderAnalyser.DateTimeNow
     {
         public const string DiagnosticId = nameof(DateTimeNowAnalyser);
 
-        public const string Title = "Use DateTimeProvider instead of DateTime";
+        public const string Title = "Use DateTimeProvider.LocalNow instead of DateTime";
         public const string MessageFormat = "Use DateTimeProvider.LocalNow instead of DateTime.Now";
         public const string Description = "Use DateTimeProvider so that date and time is abstracted and easier to test";
         public const string HelpLinkUri = "https://github.com/dennisroche/DateTimeProvider";

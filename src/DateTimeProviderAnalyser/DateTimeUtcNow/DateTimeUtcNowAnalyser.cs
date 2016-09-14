@@ -12,7 +12,7 @@ namespace DateTimeProviderAnalyser.DateTimeUtcNow
     {
         public const string DiagnosticId = nameof(DateTimeUtcNowAnalyser);
 
-        public const string Title = "Use DateTimeProvider instead of DateTime";
+        public const string Title = "Use DateTimeProvider.UtcNow instead of DateTime";
         public const string MessageFormat = "Use DateTimeProvider.UtcNow instead of DateTime.UtcNow";
         public const string Description = "Use DateTimeProvider so that date and time is abstracted and easier to test";
         public const string HelpLinkUri = "https://github.com/dennisroche/DateTimeProvider";

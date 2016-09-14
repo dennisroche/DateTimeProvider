@@ -32,8 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DateTimeOffsetNow\DateTimeUtcNowAnalyser.cs" />
-    <Compile Include="DateTimeOffsetNow\DateTimeUtcNowCodeFix.cs" />
+    <Compile Include="DateTimeOffsetNow\DateTimeOffsetNowAnalyser.cs" />
+    <Compile Include="DateTimeOffsetNow\DateTimeOffsetNowCodeFix.cs" />
     <Compile Include="DateTimeUtcNow\DateTimeUtcNowAnalyser.cs" />
     <Compile Include="DateTimeUtcNow\DateTimeUtcNowCodeFix.cs" />
     <Compile Include="DateTimeNow\DateTimeNowCodeFix.cs" />
