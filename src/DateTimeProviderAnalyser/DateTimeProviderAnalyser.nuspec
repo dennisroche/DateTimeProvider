@@ -7,6 +7,7 @@
     <authors>dennisroche</authors>
     <projectUrl>https://github.com/dennisroche/DateTimeProvider/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/dennisroche/DateTimeProvider/master/LICENSE</licenseUrl>
     <description>Provides Roslyn Analyser to provide code suggestions to change DateTime to DateTimeProvider.</description>
     <tags>DateTimeAnalyser, DateTimeProvider, analyzers</tags>
     <frameworkAssemblies>
