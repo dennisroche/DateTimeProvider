@@ -9,9 +9,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Provides Roslyn Analyser to provide code suggestions to change DateTime to DateTimeProvider.</description>
     <tags>DateTimeAnalyser, DateTimeProvider, analyzers</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+    </frameworkAssemblies>
+    <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="*.dll" target="analyzers\dotnet\cs" exclude="**\Microsoft.CodeAnalysis.*;**\System.Collections.Immutable.*;**\System.Reflection.Metadata.*;**\System.Composition.*" />
-    <file src="Scripts\*.ps1" target="tools\" />
+    <file src="bin\Release\*.dll" target="analyzers\dotnet\cs" exclude="**\Microsoft.CodeAnalysis.*;**\System.Collections.Immutable.*;**\System.Reflection.Metadata.*;**\System.Composition.*" />
+    <file src="tools\*.ps1" target="tools\" />
   </files>
 </package>

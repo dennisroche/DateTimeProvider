@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DateTimeProviderAnalyser.nuspec" />
-    <None Include="Scripts\Install.ps1" />
-    <None Include="Scripts\Uninstall.ps1" />
+    <None Include="tools\install.ps1" />
+    <None Include="tools\uninstall.ps1" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
