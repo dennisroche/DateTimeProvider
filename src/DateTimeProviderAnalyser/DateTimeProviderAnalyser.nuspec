@@ -13,9 +13,6 @@
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" targetFramework="" />
     </frameworkAssemblies>
-    <dependencies>
-      <!-- None -->
-    </dependencies>
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
