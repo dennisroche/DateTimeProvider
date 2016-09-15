@@ -32,6 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\DateTimeProvider\DateTimeProvider.cs">
+      <Link>DateTimeProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\DateTimeProvider\IDateTimeProvider.cs">
+      <Link>IDateTimeProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\DateTimeProvider\UtcDateTimeProvider.cs">
+      <Link>UtcDateTimeProvider.cs</Link>
+    </Compile>
     <Compile Include="DateTimeOffsetNow\DateTimeOffsetNowAnalyser.cs" />
     <Compile Include="DateTimeOffsetNow\DateTimeOffsetNowCodeFix.cs" />
     <Compile Include="DateTimeUtcNow\DateTimeUtcNowAnalyser.cs" />
@@ -95,12 +104,6 @@
       <HintPath>..\..\packages\System.Reflection.Metadata.1.0.21\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
       <Private>False</Private>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DateTimeProvider\DateTimeProvider.csproj">
-      <Project>{f17c930a-ebea-4eb1-a178-325c31891eba}</Project>
-      <Name>DateTimeProvider</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\v4.5\Microsoft.Portable.CSharp.targets" />
 </Project>
