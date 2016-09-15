@@ -12,7 +12,7 @@ namespace DateTimeProviderAnalyser.DateTimeOffsetNow
     {
         public const string DiagnosticId = nameof(DateTimeOffsetNowAnalyser);
 
-        public const string Title = "Use DateTimeProvider instead of DateTimeOffset";
+        public const string Title = "Use DateTimeProvider.Now instead of DateTimeOffset";
         public const string MessageFormat = "Use DateTimeProvider.Now instead of DateTimeOffset.Now";
         public const string Description = "Use DateTimeProvider so that date and time is abstracted and easier to test";
         public const string HelpLinkUri = "https://github.com/dennisroche/DateTimeProvider";
