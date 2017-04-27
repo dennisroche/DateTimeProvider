@@ -5,7 +5,7 @@
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{77ABCB41-E1F1-4BCE-B1B6-38C72F8D1CAA}</ProjectGuid>
+    <ProjectGuid>42b2c20b-8175-4a3e-8d1f-52ca44721910</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DateTimeProviderAnalyser</RootNamespace>
