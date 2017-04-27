@@ -1,7 +1,9 @@
-DateTimeProvider [![Build Master](https://ci.appveyor.com/api/projects/status/9rmer97iudefls62/branch/master?svg=true)](https://ci.appveyor.com/project/dennisroche/datetimeprovider) [![NuGet Version](http://img.shields.io/nuget/v/DateTimeProvider.svg?style=flat)](https://www.nuget.org/packages/DateTimeProvider/) [![Join the chat at https://gitter.im/DateTimeProvider/Lobby](https://badges.gitter.im/DateTimeProvider/Lobby.svg)](https://gitter.im/DateTimeProvider/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+DateTimeProvider [![Build Master](https://ci.appveyor.com/api/projects/status/9rmer97iudefls62/branch/master?svg=true)](https://ci.appveyor.com/project/dennisroche/datetimeprovider) [![NuGet Version](http://img.shields.io/nuget/v/DateTimeProvider.svg?style=flat)](https://www.nuget.org/packages/DateTimeProvider/) [![.NET Standard 1.3](https://img.shields.io/badge/.NET%20Core-netstandard1.3-lightgrey.svg)](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.3.md) ![.NET Framework 4.5](https://img.shields.io/badge/.NET-4.5.2-lightgrey.svg)  [![Join the chat at https://gitter.im/DateTimeProvider/Lobby](https://badges.gitter.im/DateTimeProvider/Lobby.svg)](https://gitter.im/DateTimeProvider/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ================
 
-Provides an interface IDateTimeProvider and static container. Implemented as a Portal Class Library (PCL) targeting **Profile111** (`portable-net45+netcore45+wpa81`).
+Provides an interface IDateTimeProvider and static container.
+
+Targets `netstandard1.3` and `net45`.
 
 `DateTimeProvider` exists in the `global::` namespace to make usage easier.
 
