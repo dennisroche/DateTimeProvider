@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>DateTimeProvider</id>
+    <version>$version$</version>
+    <title>DateTimeProvider</title>
+    <authors>dennisroche</authors>
+    <projectUrl>https://github.com/dennisroche/DateTimeProvider/</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/dennisroche/DateTimeProvider/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides an interface IDataTimeProvider and static container.</description>
+    <tags>DateTime, DateTimeProvider, Date, Time</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard1.3">
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.5.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\net45\DateTimeProvider.dll" target="lib\net45\DateTimeProvider.dll" />
+    <file src="bin\Release\netstandard1.3\DateTimeProvider.dll" target="lib\netstandard1.3\DateTimeProvider.dll" />
+  </files>
+</package>

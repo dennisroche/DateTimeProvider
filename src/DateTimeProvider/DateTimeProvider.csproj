@@ -2,14 +2,6 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;netstandard1.3</TargetFrameworks>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageTags>DateTime, DateTimeProvider, Date, Time</PackageTags>
-    <Description>Provides an interface IDataTimeProvider and static container.</Description>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/dennisroche/DateTimeProvider/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/dennisroche/DateTimeProvider/</PackageProjectUrl>
-    <Authors>dennisroche</Authors>
-    <Company />
-    <Version>1.0.70</Version>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' != 'net45'">
