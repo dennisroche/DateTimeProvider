@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeProvider", "src\DateTimeProvider\DateTimeProvider.csproj", "{F17C930A-EBEA-4EB1-A178-325C31891EBA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{674CB84D-49FF-4C40-AE4B-BE4702201FFF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA95DE03-AC90-41BF-B28F-96C0D27BA3C5}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
@@ -14,11 +12,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Roslyn Analyser", "Roslyn Analyser", "{73CCA058-60E6-4B9E-911B-5F489A4AF8C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeProvider", "src\DateTimeProvider\DateTimeProvider.csproj", "{05DCFEC4-55E7-49F4-BE9D-B7E57DA32D2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeProviderAnalyser", "src\DateTimeProviderAnalyser\DateTimeProviderAnalyser.csproj", "{77ABCB41-E1F1-4BCE-B1B6-38C72F8D1CAA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Roslyn Analyser", "Roslyn Analyser", "{BB359DF8-7E3C-429D-A1BE-256E95170C8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeProviderAnalyser.Test", "src\DateTimeProviderAnalyser.Test\DateTimeProviderAnalyser.Test.csproj", "{873338E7-34A4-4C25-9DFD-B5ACBBDC9DA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeProviderAnalyser", "src\DateTimeProviderAnalyser\DateTimeProviderAnalyser.csproj", "{42B2C20B-8175-4A3E-8D1F-52CA44721910}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeProviderAnalyser.Tests", "src\DateTimeProviderAnalyser.Tests\DateTimeProviderAnalyser.Tests.csproj", "{A1D671F0-190E-42C0-8ACD-84E427FCF4B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,24 +26,24 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F17C930A-EBEA-4EB1-A178-325C31891EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F17C930A-EBEA-4EB1-A178-325C31891EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F17C930A-EBEA-4EB1-A178-325C31891EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F17C930A-EBEA-4EB1-A178-325C31891EBA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77ABCB41-E1F1-4BCE-B1B6-38C72F8D1CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77ABCB41-E1F1-4BCE-B1B6-38C72F8D1CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77ABCB41-E1F1-4BCE-B1B6-38C72F8D1CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77ABCB41-E1F1-4BCE-B1B6-38C72F8D1CAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{873338E7-34A4-4C25-9DFD-B5ACBBDC9DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{873338E7-34A4-4C25-9DFD-B5ACBBDC9DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{873338E7-34A4-4C25-9DFD-B5ACBBDC9DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{873338E7-34A4-4C25-9DFD-B5ACBBDC9DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05DCFEC4-55E7-49F4-BE9D-B7E57DA32D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05DCFEC4-55E7-49F4-BE9D-B7E57DA32D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05DCFEC4-55E7-49F4-BE9D-B7E57DA32D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05DCFEC4-55E7-49F4-BE9D-B7E57DA32D2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42B2C20B-8175-4A3E-8D1F-52CA44721910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42B2C20B-8175-4A3E-8D1F-52CA44721910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42B2C20B-8175-4A3E-8D1F-52CA44721910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42B2C20B-8175-4A3E-8D1F-52CA44721910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D671F0-190E-42C0-8ACD-84E427FCF4B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D671F0-190E-42C0-8ACD-84E427FCF4B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D671F0-190E-42C0-8ACD-84E427FCF4B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D671F0-190E-42C0-8ACD-84E427FCF4B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{77ABCB41-E1F1-4BCE-B1B6-38C72F8D1CAA} = {73CCA058-60E6-4B9E-911B-5F489A4AF8C4}
-		{873338E7-34A4-4C25-9DFD-B5ACBBDC9DA0} = {73CCA058-60E6-4B9E-911B-5F489A4AF8C4}
+		{42B2C20B-8175-4A3E-8D1F-52CA44721910} = {BB359DF8-7E3C-429D-A1BE-256E95170C8D}
+		{A1D671F0-190E-42C0-8ACD-84E427FCF4B6} = {BB359DF8-7E3C-429D-A1BE-256E95170C8D}
 	EndGlobalSection
 EndGlobal
