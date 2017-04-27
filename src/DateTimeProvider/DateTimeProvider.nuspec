@@ -11,9 +11,7 @@
     <description>Provides an interface IDataTimeProvider and static container.</description>
     <tags>DateTime, DateTimeProvider, Date, Time</tags>
     <dependencies>
-      <group targetFramework=".NETStandard1.3">
-        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
-      </group>
+      <group targetFramework=".NETStandard1.3" />
       <group targetFramework=".NETFramework4.5.2" />
     </dependencies>
   </metadata>
