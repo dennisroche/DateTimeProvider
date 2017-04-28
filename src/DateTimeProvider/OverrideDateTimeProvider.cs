@@ -1,4 +1,5 @@
 using System;
+using DateTimeProvider;
 
 namespace DateTimeProviders
 {
@@ -10,9 +11,9 @@ namespace DateTimeProviders
         private OverrideDateTimeProvider(StaticDateTimeProvider staticProvider)
         {
             _staticProvider = staticProvider;
-            _originalProvider = DateTimeProvider.Provider;
+            _originalProvider = DateTimeProvider.DateTimeProvider.Provider;
 
-            DateTimeProvider.Provider = _staticProvider;
+            DateTimeProvider.DateTimeProvider.Provider = _staticProvider;
         }
 
         public OverrideDateTimeProvider()
@@ -32,7 +33,7 @@ namespace DateTimeProviders
 
         public void Dispose()
         {
-            DateTimeProvider.Provider = _originalProvider;
+            DateTimeProvider.DateTimeProvider.Provider = _originalProvider;
         }
 
         public OverrideDateTimeProvider SetNow(string now)

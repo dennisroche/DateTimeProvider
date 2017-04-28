@@ -1,6 +1,6 @@
 using System;
 
-namespace DateTimeProviderAnalyser.Test.TestHelpers
+namespace DateTimeProviderAnalyser.Tests.TestHelpers
 {
     /// <summary>
     /// Location where the diagnostic appears, as determined by path, line number, and column number.

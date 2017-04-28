@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -9,21 +10,31 @@ using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DateTimeProviderAnalyser.Test.TestHelpers
+namespace DateTimeProviderAnalyser.Tests.TestHelpers
 {
     /// <summary>
     /// Superclass of all Unit Tests for DiagnosticAnalyzers
     /// </summary>
     public abstract class DiagnosticVerifier
     {
-        private static readonly MetadataReference CorlibReference = MetadataReference.CreateFromFile(typeof(object).Assembly.Location);
-        private static readonly MetadataReference SystemCoreReference = MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location);
-        private static readonly MetadataReference CSharpSymbolsReference = MetadataReference.CreateFromFile(typeof(CSharpCompilation).Assembly.Location);
-        private static readonly MetadataReference CodeAnalysisReference = MetadataReference.CreateFromFile(typeof(Compilation).Assembly.Location);
+        private static readonly MetadataReference CorlibReference = CreateMetadataReferenceFromAssembly(typeof(object).GetTypeInfo().Assembly);
+        private static readonly MetadataReference SystemCoreReference = CreateMetadataReferenceFromAssembly(typeof(Enumerable).GetTypeInfo().Assembly);
+        private static readonly MetadataReference CSharpSymbolsReference = CreateMetadataReferenceFromAssembly(typeof(CSharpCompilation).GetTypeInfo().Assembly);
+        private static readonly MetadataReference CodeAnalysisReference = CreateMetadataReferenceFromAssembly(typeof(Compilation).GetTypeInfo().Assembly);
 
         private const string DefaultFilePathPrefix = "Test";
         private const string CSharpDefaultFileExt = "cs";
         private const string TestProjectName = "TestProject";
+
+        private static MetadataReference CreateMetadataReferenceFromAssembly(Assembly assembly)
+        {
+            var result  = typeof(MetadataReference)
+                .GetTypeInfo()
+                .GetDeclaredMethod("CreateFromAssembly")
+                .Invoke(null, new object[]{ assembly });
+
+            return (MetadataReference) result;
+        }
 
         /// <summary>
         /// Get the CSharp analyzer being tested
@@ -300,7 +311,7 @@ namespace DateTimeProviderAnalyser.Test.TestHelpers
 
             if (sources.Length != documents.Length)
             {
-                throw new SystemException("Amount of sources did not match amount of Documents created");
+                throw new Exception("Amount of sources did not match amount of Documents created");
             }
 
             return documents;

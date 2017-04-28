@@ -1,6 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 
-namespace DateTimeProviderAnalyser.Test.TestHelpers
+namespace DateTimeProviderAnalyser.Tests.TestHelpers
 {
     public struct DiagnosticResult
     {
@@ -10,8 +10,8 @@ namespace DateTimeProviderAnalyser.Test.TestHelpers
 
         public DiagnosticResultLocation[] Locations
         {
-            get { return _locations ?? (_locations = new DiagnosticResultLocation[] {}); }
-            set { _locations = value; }
+            get => _locations ?? (_locations = new DiagnosticResultLocation[] {});
+            set => _locations = value;
         }
 
         public DiagnosticSeverity Severity { get; set; }

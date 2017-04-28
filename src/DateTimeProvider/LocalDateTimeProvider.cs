@@ -1,4 +1,6 @@
-﻿namespace DateTimeProviders
+﻿using DateTimeProvider;
+
+namespace DateTimeProviders
 {
     public class LocalDateTimeProvider : IDateTimeProvider
     {

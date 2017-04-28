@@ -10,7 +10,7 @@ using Microsoft.CodeAnalysis.Formatting;
 using Microsoft.CodeAnalysis.Simplification;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DateTimeProviderAnalyser.Test.TestHelpers
+namespace DateTimeProviderAnalyser.Tests.TestHelpers
 {
     /// <summary>
     /// Contains methods used to verify correctness of codefixes

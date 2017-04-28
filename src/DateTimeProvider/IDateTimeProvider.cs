@@ -1,4 +1,4 @@
-namespace DateTimeProviders
+namespace DateTimeProvider
 {
     public interface IDateTimeProvider
     {
