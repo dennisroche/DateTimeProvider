@@ -1,18 +1,22 @@
-﻿using DateTimeProviders;
+﻿using System;
+using DateTimeProviders;
 
 // ReSharper disable CheckNamespace
 // Using global:: namespace
 
 public static class DateTimeProvider
 {
+    [ThreadStatic]
+    private static IDateTimeProvider _provider;
+
     static DateTimeProvider()
     {
         Provider = new UtcDateTimeProvider();
     }
 
-    public static System.DateTimeOffset Now => Provider.Now;
-    public static System.DateTime LocalNow => Provider.Now.LocalDateTime;
-    public static System.DateTime UtcNow => Provider.Now.UtcDateTime;
+    public static DateTimeOffset Now => Provider.Now;
+    public static DateTime LocalNow => Provider.Now.LocalDateTime;
+    public static DateTime UtcNow => Provider.Now.UtcDateTime;
 
-    public static IDateTimeProvider Provider { get; set; }
+    public static IDateTimeProvider Provider { get => _provider; set => _provider = value; }
 }
