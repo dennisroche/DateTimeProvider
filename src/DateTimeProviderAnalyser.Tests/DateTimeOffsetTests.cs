@@ -1,11 +1,11 @@
 ﻿using DateTimeProviderAnalyser.DateTimeOffsetNow;
-using DateTimeProviderAnalyser.Test.TestHelpers;
+using DateTimeProviderAnalyser.Tests.TestHelpers;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DateTimeProviderAnalyser.Test
+namespace DateTimeProviderAnalyser.Tests
 {
     [TestClass]
     public class DateTimeOffsetTests : CodeFixVerifier

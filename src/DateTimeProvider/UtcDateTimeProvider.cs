@@ -1,4 +1,5 @@
-﻿namespace DateTimeProviders
+﻿// ReSharper disable once CheckNamespace
+namespace DateTimeProviders
 {
     public class UtcDateTimeProvider : IDateTimeProvider
     {
