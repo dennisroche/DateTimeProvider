@@ -3,11 +3,10 @@ using DateTimeProviderAnalyser.Tests.TestHelpers;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace DateTimeProviderAnalyser.Tests
 {
-    [TestClass]
     public class DateTimeOffsetTests : CodeFixVerifier
     {
         private const string SourceCodeWithIssue = @"
@@ -48,14 +47,14 @@ namespace DateTimeProviderAnalyser.Tests
             return new DateTimeOffsetNowAnalyser();
         }
 
-        [TestMethod]
+        [Fact]
         public void ExpectNoDiagnosticResults()
         {
             const string source = @"";
             VerifyCSharpDiagnostic(source);
         }
 
-        [TestMethod]
+        [Fact]
         public void IdentifySuggestedFix()
         {
             var expected = new DiagnosticResult
@@ -69,7 +68,7 @@ namespace DateTimeProviderAnalyser.Tests
             VerifyCSharpDiagnostic(SourceCodeWithIssue, expected);
         }
 
-        [TestMethod]
+        [Fact]
         public void ApplySuggestedFix()
         {
             var expected = new DiagnosticResult
