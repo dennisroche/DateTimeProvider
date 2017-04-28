@@ -16,7 +16,7 @@
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="bin\Release\*.dll" target="analyzers\dotnet\cs" exclude="**\Microsoft.CodeAnalysis.*;**\System.Collections.Immutable.*;**\System.Reflection.Metadata.*;**\System.Composition.*" />
+    <file src="bin\Release\netstandard1.3\DateTimeProviderAnalyser.dll" target="analyzers\dotnet\cs" />
     <file src="tools\*.ps1" target="tools\" />
   </files>
 </package>
