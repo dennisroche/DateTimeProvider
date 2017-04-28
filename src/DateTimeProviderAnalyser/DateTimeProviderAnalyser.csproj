@@ -30,4 +30,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <DotNetCliToolReference Include="dotnet-setversion" Version="*" />
+  </ItemGroup>
+
 </Project>

@@ -13,4 +13,8 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 
+  <ItemGroup>
+    <DotNetCliToolReference Include="dotnet-setversion" Version="*" />
+  </ItemGroup>
+
 </Project>
