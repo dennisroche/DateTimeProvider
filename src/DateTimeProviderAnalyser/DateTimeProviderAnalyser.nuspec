@@ -13,6 +13,11 @@
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" targetFramework="" />
     </frameworkAssemblies>
+    <dependencies>
+      <group targetFramework=".NETStandard1.3" >
+      </group>
+      <group targetFramework=".NETFramework4.5.2" />
+    </dependencies>
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
