@@ -38,7 +38,7 @@ namespace DateTimeProviderAnalyser.DateTimeUtcNow
         private static async Task<Document> ChangeToDateTimeProvider(Document document, SyntaxNode syntaxNode, CancellationToken cancellationToken)
         {
             var root = await document.GetSyntaxRootAsync(cancellationToken);
-            var newRoot = root.ReplaceNode(syntaxNode, SyntaxFactory.ParseExpression($"{nameof(DateTimeProvider)}.UtcNow"));
+            var newRoot = root.ReplaceNode(syntaxNode, SyntaxFactory.ParseExpression($"{nameof(DateTimeProvider)}.{nameof(DateTimeProvider.UtcNow)}"));
             return document.WithSyntaxRoot(newRoot);
         }
     }
