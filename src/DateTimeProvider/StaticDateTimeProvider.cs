@@ -1,6 +1,6 @@
 using System;
-using DateTimeProvider;
 
+// ReSharper disable once CheckNamespace
 namespace DateTimeProviders
 {
     public class StaticDateTimeProvider : IDateTimeProvider

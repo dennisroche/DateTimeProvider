@@ -1,5 +1,4 @@
-﻿using DateTimeProvider;
-
+﻿// ReSharper disable once CheckNamespace
 namespace DateTimeProviders
 {
     public class LocalDateTimeProvider : IDateTimeProvider
