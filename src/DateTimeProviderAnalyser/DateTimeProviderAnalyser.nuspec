@@ -15,7 +15,6 @@
     </frameworkAssemblies>
     <dependencies>
       <group targetFramework=".NETStandard1.3" >
-        <dependency id="Microsoft.CodeAnalysis.CSharp.Workspaces" version="2.1.0" />
       </group>
       <group targetFramework=".NETFramework4.5.2" />
     </dependencies>
