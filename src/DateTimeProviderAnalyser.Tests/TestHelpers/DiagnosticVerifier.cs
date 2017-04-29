@@ -28,12 +28,11 @@ namespace DateTimeProviderAnalyser.Tests.TestHelpers
 
         private static MetadataReference CreateMetadataReferenceFromAssembly(Assembly assembly)
         {
-            var result  = typeof(MetadataReference)
+            var method = typeof(MetadataReference)
                 .GetTypeInfo()
-                .GetDeclaredMethod("CreateFromAssembly")
-                .Invoke(null, new object[]{ assembly });
+                .GetMethod("CreateFromAssembly", new[] {typeof(Assembly)});
 
-            return (MetadataReference) result;
+            return (MetadataReference) method.Invoke(null, new object[] { assembly });
         }
 
         /// <summary>
