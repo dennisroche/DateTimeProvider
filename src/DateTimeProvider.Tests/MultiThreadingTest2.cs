@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using Shouldly;
 using Xunit;
 
@@ -15,12 +16,14 @@ namespace DateTimeProviders.Tests
         [Fact]
         public void MoveTimeForward5HrsFromOffset8()
         {
+            var culture = new CultureInfo("en-AU");
+
             var testingWithDate = new DateTimeOffset(new DateTime(2014, 10, 01), TimeSpan.FromHours(8));
             using (var o = new OverrideDateTimeProvider(testingWithDate))
             {
-                DateTimeProvider.Now.ToString().ShouldBe("1/10/2014 12:00:00 AM +08:00");
+                DateTimeProvider.Now.ToString(culture).ShouldBe("1/10/2014 12:00:00 AM +08:00");
                 o.MoveTimeForward(TimeSpan.FromHours(5));
-                DateTimeProvider.Now.ToString().ShouldBe("1/10/2014 5:00:00 AM +08:00");
+                DateTimeProvider.Now.ToString(culture).ShouldBe("1/10/2014 5:00:00 AM +08:00");
             }
         }
     }
