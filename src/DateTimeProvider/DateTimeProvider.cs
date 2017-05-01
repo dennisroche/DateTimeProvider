@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using DateTimeProviders;
 
 // ReSharper disable CheckNamespace
@@ -6,17 +7,20 @@ using DateTimeProviders;
 
 public static class DateTimeProvider
 {
-    [ThreadStatic]
-    private static IDateTimeProvider _provider;
+    private static readonly ThreadLocal<IDateTimeProvider> ProviderThreadLocal;
 
     static DateTimeProvider()
     {
-        Provider = new UtcDateTimeProvider();
+        ProviderThreadLocal = new ThreadLocal<IDateTimeProvider>(() => new UtcDateTimeProvider());
     }
 
-    public static DateTimeOffset Now => Provider.Now;
-    public static DateTime LocalNow => Provider.Now.LocalDateTime;
-    public static DateTime UtcNow => Provider.Now.UtcDateTime;
+    public static DateTimeOffset Now => ProviderThreadLocal.Value.Now;
+    public static DateTime LocalNow => ProviderThreadLocal.Value.Now.LocalDateTime;
+    public static DateTime UtcNow => ProviderThreadLocal.Value.Now.UtcDateTime;
 
-    public static IDateTimeProvider Provider { get => _provider; set => _provider = value; }
+    public static IDateTimeProvider Provider
+    {
+        get => ProviderThreadLocal.Value;
+        set => ProviderThreadLocal.Value = value;
+    }
 }
