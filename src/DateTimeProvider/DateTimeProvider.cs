@@ -7,16 +7,20 @@ using DateTimeProviders;
 
 public static class DateTimeProvider
 {
-    private static ThreadLocal<IDateTimeProvider> _provider;
+    private static readonly ThreadLocal<IDateTimeProvider> ProviderTheadLocal;
 
     static DateTimeProvider()
     {
-        _provider = new ThreadLocal<IDateTimeProvider>(() => new UtcDateTimeProvider());
+        ProviderTheadLocal = new ThreadLocal<IDateTimeProvider>(() => new UtcDateTimeProvider());
     }
 
-    public static DateTimeOffset Now => Provider.Now;
-    public static DateTime LocalNow => Provider.Now.LocalDateTime;
-    public static DateTime UtcNow => Provider.Now.UtcDateTime;
+    public static DateTimeOffset Now => ProviderTheadLocal.Value.Now;
+    public static DateTime LocalNow => ProviderTheadLocal.Value.Now.LocalDateTime;
+    public static DateTime UtcNow => ProviderTheadLocal.Value.Now.UtcDateTime;
 
-    public static IDateTimeProvider Provider { get => _provider.Value; set => _provider = new ThreadLocal<IDateTimeProvider>(() => value); }
+    public static IDateTimeProvider Provider
+    {
+        get => ProviderTheadLocal.Value;
+        set => ProviderTheadLocal.Value = value;
+    }
 }
