@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -81,6 +82,11 @@ namespace DateTimeProviders.Tests
 
         [Fact]
         public async Task GivenTwoTasks_ThenEachTaskShouldHaveItsSetValue()
+        {
+            await Task.Factory.StartNew(ThreadIsolated_GivenTwoTasks_ThenEachTaskShouldHaveItsSetValue, TaskCreationOptions.LongRunning).ConfigureAwait(continueOnCapturedContext: false);
+        }
+
+        private async Task ThreadIsolated_GivenTwoTasks_ThenEachTaskShouldHaveItsSetValue()
         {
             var date0 = new DateTime(2020, 01, 01);
             var date1 = new DateTime(2021, 12, 31);
