@@ -80,7 +80,7 @@ namespace DateTimeProviders.Tests
         }
 
         [Fact]
-        public void GivenTwoTasks_ThenEachTaskShouldHaveItsSetValue()
+        public async Task GivenTwoTasks_ThenEachTaskShouldHaveItsSetValue()
         {
             var date0 = new DateTime(2020, 01, 01);
             var date1 = new DateTime(2021, 12, 31);
@@ -122,7 +122,7 @@ namespace DateTimeProviders.Tests
             t0.RunSynchronously();
             t1.RunSynchronously();
 
-            Task.WaitAll(t0.Unwrap(), t1.Unwrap());
+            await Task.WhenAll(t0.Unwrap(), t1.Unwrap());
         }
     }
 }
