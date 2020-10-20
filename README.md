@@ -3,7 +3,7 @@ DateTimeProvider [![Build Master](https://ci.appveyor.com/api/projects/status/9r
 
 Provides an interface IDateTimeProvider and static container.
 
-Targets `netstandard1.3` and `net45`.
+Targets `netstandard1.3` and `net46`.
 
 `DateTimeProvider` exists in the `global::` namespace to make usage easier.
 
