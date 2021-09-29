@@ -9,19 +9,14 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://raw.githubusercontent.com/dennisroche/DateTimeProvider/master/LICENSE</licenseUrl>
     <description>Provides Roslyn Analyser to provide code suggestions to change DateTime to DateTimeProvider.</description>
-    <tags>DateTimeAnalyser, DateTimeProvider, analyzers</tags>
-    <frameworkAssemblies>
-      <frameworkAssembly assemblyName="System" targetFramework="" />
-    </frameworkAssemblies>
+    <tags>DateTimeAnalyser DateTimeProvider analyzers</tags>
     <dependencies>
-      <group targetFramework=".NETStandard1.3" >
-      </group>
-      <group targetFramework=".NETFramework4.5.2" />
+      <group targetFramework=".NETStandard2.0" />
     </dependencies>
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
-    <file src="bin\Release\netstandard1.3\DateTimeProviderAnalyser.dll" target="analyzers\dotnet\cs" />
+    <file src="bin\Release\netstandard2.0\DateTimeProviderAnalyser.dll" target="analyzers\dotnet\cs" />
     <file src="tools\*.ps1" target="tools\" />
   </files>
 </package>

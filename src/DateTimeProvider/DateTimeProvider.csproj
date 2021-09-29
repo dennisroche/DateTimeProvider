@@ -1,11 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard1.3</TargetFrameworks>
+    <TargetFrameworks>net45;netstandard1.3;netstandard2.0</TargetFrameworks>
+    <Title>DateTimeProvider</Title>
+    <Description>Provides an interface IDataTimeProvider and static container.</Description>
+    <PackageProjectUrl>https://github.com/dennisroche/DateTimeProvider/</PackageProjectUrl>
+    <PackageTags>DateTime;DateTimeProvider;Date;Time</PackageTags>
+    <RootNamespace>DateTimeProviders</RootNamespace>
+    <LangVersion>9</LangVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' != 'net45'">
-  </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
     <Reference Include="System" />
